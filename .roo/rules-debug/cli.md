@@ -15,11 +15,11 @@ When debugging the CLI, `console.log` will break the TUI (Terminal User Interfac
         const DEBUG_LOG = "/tmp/roo-cli-debug.log"
 
         function debugLog(message: string, data?: unknown) {
-        	const timestamp = new Date().toISOString()
-        	const entry = data
-        		? `[${timestamp}] ${message}: ${JSON.stringify(data, null, 2)}\n`
-        		: `[${timestamp}] ${message}\n`
-        	fs.appendFileSync(DEBUG_LOG, entry)
+         const timestamp = new Date().toISOString()
+         const entry = data
+          ? `[${timestamp}] ${message}: ${JSON.stringify(data, null, 2)}\n`
+          : `[${timestamp}] ${message}\n`
+         fs.appendFileSync(DEBUG_LOG, entry)
         }
         ```
 
